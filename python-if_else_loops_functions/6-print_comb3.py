@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for digit1 in range(0, 10):
-    for digit2 in range(digit1, 10):
-        if digit1 != digit2:
-            print("{}{}".format(digit1, digit2), end=', ' if digit1 != 8 or digit2 != 9 else '\n')
+for d1 in range(0, 10):
+    for d2 in range(d1, 10):
+        if d1 != d2:
+            print("{}{}".format(d1, d2), end=', ' if d1 != 8 or d2 != 9 else '\n')
