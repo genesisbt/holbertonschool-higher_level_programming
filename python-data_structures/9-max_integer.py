@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-
-def print_list_integer(my_list=[]):
-    for num in my_list:
-        print("{:d}".format(num))
+def max_integer(my_list=[]):
+    if not my_list:
+        return None
+    max = my_list[0]
+    for n in my_list[1:]:
+        if n > max:
+            max = n
+    return max
