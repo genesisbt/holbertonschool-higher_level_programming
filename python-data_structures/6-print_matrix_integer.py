@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-
-def print_list_integer(my_list=[]):
-    for num in my_list:
-        print("{:d}".format(num))
+def print_matrix_integer(matrix=[[]]):
+    for row in matrix:
+        for num in row:
+            print("{:d}".format(num), end=' ')
+        print()
