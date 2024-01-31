@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    newmatrix = matrix
+    newmatrix = matrix.copy()
     result = result = list(map(list, map(map(square), newmatrix))) 
 return newmatrix
 
