@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    newmatrix = matrix.copy()
-    result = result = list(map(list, map(map(square), newmatrix))) 
-return newmatrix
-
-def square(number):
-    number = number * number
-return number
+    newmatrix = [row[:] for row in matrix]
+    n = len(matrix)
+    for i in range(n):
+        m = len(matrix[i])
+        for j in range(m):
+            newmatrix[i][j] = matrix[i][j] ** 2
+    return newmatrix
