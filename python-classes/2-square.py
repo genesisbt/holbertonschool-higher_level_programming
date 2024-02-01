@@ -12,10 +12,8 @@ class Square:
     Attributes:
     size: is a private instance attribute.
     """
+        self.__size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
-            size = 0
         elif size < 0:
             raise ValueError("size must be >=0")
-            size = 0
-        self.__size = size
