@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-'''Class Square defines a Square'''
-
+'''This is a class that defines a square'''
 
 class Square:
-'''code for square class'''
+     '''Initialize an instance of the Square class.'''
     pass
