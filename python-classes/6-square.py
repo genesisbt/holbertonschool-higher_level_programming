@@ -50,8 +50,5 @@ class Square:
             for posY in range(self.__position[1]):
                 print()
             for unit in range(self.__size):
-                for posX in range(self.__position[0]):
-                    print(" ", end="")
-                for unit2 in range(self.__size):
-                    print("#", end="")
-                print()
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
