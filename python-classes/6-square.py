@@ -9,7 +9,7 @@ class Square:
     This is a class where a square is defined.
     """
 
-    def __init__(self, size=0, position=i(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
@@ -28,10 +28,12 @@ class Square:
             raise TypeError("size must be an integer")
         elif number < 0:
             raise ValueError("size must be >= 0")
-        
+
     @position.setter
     def position(self, postuple):
-        if not isinstance(postuple, tuple) or not isinstance(postuple[0], int) or not isinstance(postuple[1], int):
+        if not isinstance(postuple, tuple)
+        or not isinstance(postuple[0], int)
+        or not isinstance(postuple[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif postuple[0] < 0 or postuple[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -44,11 +46,11 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-        for posY in range(self.__postuple[0]):
+        for posY in range(self.__position[1]):
             print()
         for unit in range(self.__size):
-            for posX in range(self.__postuple[1]):
-                print("_", end = "")
+            for posX in range(self.__position[0]):
+                print("_", end="")
             for unit2 in range(self.__size):
                 print("#", end="")
             print()
