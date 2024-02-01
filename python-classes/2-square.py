@@ -6,8 +6,12 @@ class Square:
     """ Class for defining a Square and its atributes """
 
     def __init__(self, size):
-        """ Initializes a new Instance of the Class Square """
+    """
+    This is a class where a square is defined.
 
+    Attributes:
+    size: is a private instance attribute.
+    """
         if type(size) is not int:
             raise TypeError("size must be an integer")
             size = 0
