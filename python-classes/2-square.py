@@ -3,7 +3,7 @@
 This module defines Square as a class.
 """
 
-    
+ 
 class Square:
     """
     This is a class where a square is defined.
