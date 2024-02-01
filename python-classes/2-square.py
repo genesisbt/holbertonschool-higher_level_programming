@@ -6,12 +6,11 @@ This module defines Square as a class.
     
 class Square:
     """
-    Class square.
+    This is a class where a square is defined.
 
-    Atributes:
-        size: private atribute.
+    Attributes:
+    size: is a private instance attribute.
     """
-
     def __init__(self, size=0):
         self.__size = size
         if type(size) is not int:
