@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-'''Class that defines a square'''
+"""
+Class that defines a square
+"""
 
-
+    
 class Square:
     """
-    Class name
+    Class square.
 
     Atributes:
-        size (int): private atribute
+        size: private atribute.
     """
 
     def __init__(self, size=0):
