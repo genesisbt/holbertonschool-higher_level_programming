@@ -50,7 +50,7 @@ class Square:
             print()
         for unit in range(self.__size):
             for posX in range(self.__position[0]):
-                print("_", end="")
+                print(" ", end="")
             for unit2 in range(self.__size):
                 print("#", end="")
             print()
