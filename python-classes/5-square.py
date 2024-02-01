@@ -28,8 +28,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        for unit in range (self.__size):
+        for unit in range(self.__size):
             for unit2 in range(self.__size):
                 print("#", end="")
             print()
-
