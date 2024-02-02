@@ -38,11 +38,11 @@ Module for testing add_integer function.
     >>> add_integer("School", 5)
     Traceback (most recent call last):
     TypeError: a must be an integer
-
+    
     # Case: Error - Only pass A
     >>> add_integer(2)
     100
-
+    
     # Case: Error - Only pass B
     >>> add_integer(None, 5)
     Traceback (most recent call last):
