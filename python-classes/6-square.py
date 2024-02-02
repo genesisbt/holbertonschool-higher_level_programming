@@ -60,7 +60,8 @@ class Square:
             raise TypeError("size must be an integer")
         elif number < 0:
             raise ValueError("size must be >= 0")
-        else self.__size = number
+        else:
+            self.__size = number
 
     @position.setter
     def position(self, postuple):
