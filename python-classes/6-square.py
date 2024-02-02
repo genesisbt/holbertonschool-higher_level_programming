@@ -45,42 +45,42 @@ class Square:
         return self.__position
 
     @size.setter
-    def size(self, number):
+    def size(self, value):
         """
         Setter method for the size attribute.
 
         Args:
-        number (int): The new size of the square.
+        value (int): The new size of the square.
 
         Raises:
         TypeError: If size is not an integer.
         ValueError: If size is less than 0.
         """
-        if not isinstance(number, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif number < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = number
+            self.__size = value
 
     @position.setter
-    def position(self, postuple):
+    def position(self, value):
         """
         Setter method for the position attribute.
 
         Args:
-        postuple (tuple): The new position of the square.
+        value (tuple): The new position of the square.
 
         Raises:
         TypeError: If position is not a tuple of 2 positive integers.
         """
-        if not isinstance(postuple, tuple) or \
-            len(postuple) != 2 or \
-                not all(isinstance(x, int) and x >= 0 for x in postuple):
+        if not isinstance(value, tuple) or \
+            len(value) != 2 or \
+                not all(isinstance(x, int) and x >= 0 for x in value):
             raise TypeError("position must be a \
                 tuple of 2 positive integers")
         else:
-            self.__position = postuple
+            self.__position = value
 
     def area(self):
         """
