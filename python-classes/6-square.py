@@ -3,51 +3,101 @@
 This module defines Square as a class.
 """
 
-
 class Square:
     """
-    This is a class where a square is defined.
+    This class represents a square.
+
+    Attributes:
+    __size (int): The size of the square.
+    __position (tuple): The position of the square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Initializes a new instance of the Square class.
+
+        Args:
+        size (int): The size of the square.
+        position (tuple): The position of the square.
+        """
         self.__size = size
         self.__position = position
 
-    @property
-    def size(self):
-        return (self.__size)
+        @property
+        def size(self):
+            """
+            Getter method for the size attribute.
 
-    @property
-    def position(self):
-        return (self.__position)
+            Returns:
+            int: The size of the square.
+                """
+            return self.__size
 
-    @size.setter
-    def size(self, number):
-        self.__size = number
-        if not isinstance(number, int):
-            raise TypeError("size must be an integer")
-        elif number < 0:
-            raise ValueError("size must be >= 0")
+        @property
+        def position(self):
+            """
+            Getter method for the position attribute.
 
-    @position.setter
-    def position(self, postuple):
-        if not isinstance(postuple, tuple) or \
-            not isinstance(postuple[0], int) or \
-                not isinstance(postuple[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif postuple[0] < 0 or postuple[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = postuple
+            Returns:
+            tuple: The position of the square.
+            """
+            return self.__position
 
-    def area(self):
-        return self.__size ** 2
+        @size.setter
+        def size(self, number):
+            """
+            Setter method for the size attribute.
 
-    def my_print(self):
-        if self.__size == 0:
-            print()
-        else:
-            for posY in range(self.__position[1]):
-                print()
-            for unit in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.__size)
+            Args:
+            number (int): The new size of the square.
+
+            Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+            """
+            self.__size = number
+            if not isinstance(number, int):
+                raise TypeError("size must be an integer")
+            elif number < 0:
+                raise ValueError("size must be >= 0")
+
+        @position.setter
+        def position(self, postuple):
+            """
+            Setter method for the position attribute.
+
+            Args:
+            postuple (tuple): The new position of the square.
+
+            Raises:
+            TypeError: If position is not a tuple of 2 positive integers.
+            """
+            if not isinstance(postuple, tuple) or \
+                len(postuple) != 2 or \
+                    not all(isinstance(x, int) and x >= 0 for x in postuple):
+                        raise TypeError("position must be a tuple of 2 positive integers")
+            self.__position = postuple
+
+            def area(self):
+                """
+                Calculates the area of the square.
+
+                Returns:
+                int: The area of the square.
+                """
+                return self.__size ** 2
+
+            def my_print(self):
+                """
+                Prints a representation of the square.
+                """
+                if self.__size == 0:
+                    print()
+                for posY in range(self.__position[1]):
+                    print()
+                for unit in range(self.__size):
+                    for posX in range(self.__position[0]):
+                        print("_", end="")
+                    for unit2 in range(self.__size):
+                        print("#", end="")
+                    print()
