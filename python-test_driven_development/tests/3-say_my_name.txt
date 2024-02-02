@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+"""
+Module for testing say_my_name function.
+"""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+    # Case: name and lastname are strings with length > 0
+    >>> say_my_name("german", "grassi")
+    My name is german grassi
+
+    # Case: Matrix arrays having different size (length)
+    >>> say_my_name(1, "grassi")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    # Case: Matrix arrays having different size (length)
+    >>> say_my_name("german", 1)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
