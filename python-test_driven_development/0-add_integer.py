@@ -6,7 +6,8 @@ Module for adding two integers.
 
 def add_integer(a, b=98):
     """
-    Receives two integers or float, casts them as int, and adds them, returns an int.
+    Receives two integers or float,
+    casts them as int, and adds them, returns an int.
 
     Args:
         a (int or float): First number, no default
