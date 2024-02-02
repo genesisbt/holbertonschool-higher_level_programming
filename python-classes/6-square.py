@@ -3,6 +3,7 @@
 This module defines Square as a class.
 """
 
+
 class Square:
     """
     This class represents a square.
@@ -75,13 +76,14 @@ class Square:
         if not isinstance(postuple, tuple) or \
             len(postuple) != 2 or \
                 not all(isinstance(x, int) and x >= 0 for x in postuple):
-                    raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a \
+                tuple of 2 positive integers")
         self.__position = postuple
 
     def area(self):
         """
         Calculates the area of the square.
-            
+
         Returns:
         int: The area of the square.
         """
@@ -97,7 +99,7 @@ class Square:
             print()
         for unit in range(self.__size):
             for posX in range(self.__position[0]):
-                print("_", end="")
+                print(" ", end="")
             for unit2 in range(self.__size):
                 print("#", end="")
             print()
