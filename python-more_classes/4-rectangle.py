@@ -51,7 +51,7 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        else
-        return ('\n'.join(("#" * self.width for a in range(self.height))))
+        else:
+            return ('\n'.join(("#" * self.width for a in range(self.height))))
     def __repr__(self):
         return f"Rectangle({self.width},{self.height})"
