@@ -36,17 +36,7 @@ class Rectangle:
             self.__height = value
 
     def __init__(self, width=0, height=0):
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        elif height < 0:
-            raise ValueError("height must be >= 0")
-        else:
             self.height = height
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        elif width < 0:
-            raise ValueError("width must be >= 0")
-        else:
             self.width = width
 
     def area(self):
@@ -65,4 +55,7 @@ class Rectangle:
             return ('\n'.join(("#" * self.width for a in range(self.height))))
 
     def __repr__(self):
-        return ("Rectangle({},{})".format(self.__width, self.__height))
+        """
+        Representation of the rectangle as String, for eval()
+        """
+        return "Rectangle({},{})".format(self.__width, self.__height)
