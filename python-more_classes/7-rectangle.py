@@ -55,11 +55,11 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return ('\n'.join((self.print_symbol * self.width for
+            return ('\n'.join((str(self.print_symbol) * self.width for
                     a in range(self.height))))
 
     def __repr__(self):
-        return "Rectangle({},{})".format(self.__width, self.__height)
+        return "Rectangle({},{})".format(self.width, self.height)
 
     def __del__(self):
         print("Bye rectangle...")
