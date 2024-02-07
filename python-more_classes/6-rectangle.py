@@ -9,6 +9,7 @@ class Rectangle:
     Class to define a Rectangle
     """
     number_of_instances = 0
+    print_symbol = '#'
 
     @property
     def width(self):
@@ -54,7 +55,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return ('\n'.join(("#" * self.width for a in range(self.height))))
+            return ('\n'.join((print_symbol * self.width for a in range(self.height))))
 
     def __repr__(self):
         return "Rectangle({},{})".format(self.__width, self.__height)
