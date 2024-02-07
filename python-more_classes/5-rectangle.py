@@ -36,8 +36,8 @@ class Rectangle:
             self.__height = value
 
     def __init__(self, width=0, height=0):
-            self.height = height
-            self.width = width
+        self.height = height
+        self.width = width
 
     def area(self):
         return self.height * self.width
@@ -56,6 +56,6 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({},{})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         print("Bye rectangle...")
