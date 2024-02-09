@@ -2,7 +2,7 @@
 """
 module for from_json_string function
 """
-importjson
+import json
 
 
 def from_json_string(my_str):
