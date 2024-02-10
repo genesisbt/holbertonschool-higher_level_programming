@@ -4,7 +4,7 @@ module for inherits from function
 """
 
 
-    class BaseGeometry:
+class BaseGeometry:
     """
     Defines the class BaseGeometry
     """
