@@ -17,7 +17,7 @@ class Student:
         return self.__dict_
 
     def to_json(self, attrs=None):
-    
+
         if isinstance(attrs, list):
             if all(isinstance(name, str) for name in attrs):
                 add_dict = {}
@@ -27,4 +27,3 @@ class Student:
                 return add_dict
         else:
             return self.__dict__
-
