@@ -4,7 +4,7 @@ This module contains the class student
 """
 
 
-class student:
+class Student:
     """
     Defines the class student, its atributes and functions
     """
