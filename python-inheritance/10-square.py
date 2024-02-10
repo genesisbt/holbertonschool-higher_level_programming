@@ -2,7 +2,7 @@
 """
 module for class rectangle
 """
-Rectangle = __import__('9-Rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -17,4 +17,4 @@ class Square(Rectangle):
         return "[Rectangle] {}/{}".format(self.__sidesize, self.__sidesize)
 
     def area(self):
-        return self.__sidesize **
+        return self.__sidesize ** 2
