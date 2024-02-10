@@ -1,0 +1,40 @@
+MyList = __import__('1-my_list').MyList
+
+# append random numbers negative, 0 and positive
+>>> my_list = MyList()
+>>> my_list.append(-3)
+>>> my_list.append(1)
+>>> my_list.append(-7)
+>>> my_list.append(0)
+>>> my_list.append(4)
+>>> print(my_list)
+[-3, 1, -7, 0, 4]
+
+>>> my_list.print_sorted()
+[-7, -3, 0, 1, 4]
+
+# append random all positive
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(5)
+>>> my_list.append(4)
+>>> print(my_list)
+[1, 3, 2, 5, 4]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# append random all negative
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-3)
+>>> my_list.append(-2)
+>>> my_list.append(-5)
+>>> my_list.append(-4)
+>>> print(my_list)
+[-1, -3, -2, -5, -4]
+
+>>> my_list.print_sorted()
+[-1, -2, -3, -4, -5]
