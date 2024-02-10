@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Case 1 not a number
+>>> obj1 = BaseGeometry()
+>>> obj1.integer_validator("ImNotANumber", "ButNeitherAmI")
+Traceback (most recent call last):
+TypeError: ImNotANumber must be an integer
+
+# case 2 using Area
+>>> obj2 = BaseGeometry()
+>>> obj2.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+# case 3 negative number
+>>> obj3 = BaseGeometry()
+>>> obj3.integer_validator("name", -3)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+# case 4 number is 0
+>>> obj4 = BaseGeometry()
+>>> obj4.integer_validator("name", 0)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+# case 5 empty String
+>>> obj5 = BaseGeometry()
+>>> obj5.integer_validator("", -5)
+Traceback (most recent call last):
+ValueError:  must be greater than 0
