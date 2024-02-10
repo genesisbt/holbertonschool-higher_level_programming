@@ -1,7 +1,7 @@
-MyList = __import__('1-my_list').MyList
+#!/usr/bin/python3
+my_list = __import__('1-my_list').MyList
 
 # append random numbers negative, 0 and positive
->>> my_list = MyList()
 >>> my_list.append(-3)
 >>> my_list.append(1)
 >>> my_list.append(-7)
@@ -14,7 +14,6 @@ MyList = __import__('1-my_list').MyList
 [-7, -3, 0, 1, 4]
 
 # append random all positive
->>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(3)
 >>> my_list.append(2)
@@ -27,7 +26,6 @@ MyList = __import__('1-my_list').MyList
 [1, 2, 3, 4, 5]
 
 # append random all negative
->>> my_list = MyList()
 >>> my_list.append(-1)
 >>> my_list.append(-3)
 >>> my_list.append(-2)
