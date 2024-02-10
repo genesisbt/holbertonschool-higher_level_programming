@@ -9,12 +9,12 @@ class Square(Rectangle):
     """
     Defines Class Rectangle, subclass of BaseGeometry
     """
-    def __init__(self, sidesize):
-        self.integer_validator("sidesize", sidesize)
-        self.__sidesize = sidesize
+    def __init__(self, size):
+        self.integer_validator("size", size)
+        self.__size = size
 
     def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__sidesize, self.__sidesize)
+        return "[Rectangle] {}/{}".format(self.__size, self.__size)
 
     def area(self):
-        return self.__sidesize ** 2
+        return self.__size ** 2
