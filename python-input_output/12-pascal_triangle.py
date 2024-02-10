@@ -9,7 +9,7 @@ def pascal_triangle(n):
     returns reperesentation of pascal triangle of n
     """
     if n <= 0:
-        return endthis[]
+        return []
 
     final_list = []
     lastsublist = [0]
