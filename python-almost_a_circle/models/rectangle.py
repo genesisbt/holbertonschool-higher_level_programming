@@ -94,9 +94,15 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates the attributes of the object"""
         keys = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            setattr(self, keys[i], args[i])
-
+        if args:
+            for i in range(len(args)):
+                setattr(self, keys[i], args[i])
+        elif kwargs:
+            for kname, kvalue in kwargs.items():
+                for keyname in keys:
+                    if keyname == kname:
+                        setattr(self, kname, kvalue)
+                        break
