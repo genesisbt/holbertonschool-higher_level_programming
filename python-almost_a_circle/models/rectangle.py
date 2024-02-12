@@ -43,7 +43,7 @@ class Rectangle(Base):
     def width(self, width):
         """width setter and validation"""
         if not isinstance(width, int):
-            raise TypeError("width must be an integer".format(width))
+            raise TypeError("width must be an integer")
         elif width <= 0:
             raise ValueError("width must be > 0")
         else:
