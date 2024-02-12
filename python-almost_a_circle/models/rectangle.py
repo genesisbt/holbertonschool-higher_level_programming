@@ -106,6 +106,7 @@ class Rectangle(Base):
                     if keyname == kname:
                         setattr(self, kname, kvalue)
                         break
+
     def to_dictionary(self):
         """Returns a dictionary representation of the object"""
         rectdict = {}
@@ -115,4 +116,3 @@ class Rectangle(Base):
         rectdict["x"] = self.x
         rectdict["y"] = self.y
         return rectdict
-
