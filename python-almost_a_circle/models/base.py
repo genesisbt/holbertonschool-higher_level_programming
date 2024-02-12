@@ -2,6 +2,7 @@
 """
 This module contains the base class for all geometric figures
 """
+import json
 
 
 class Base:
@@ -18,3 +19,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """turns a list of dict into a json string representation"""
+        return json.dumps(list_dictionaries)
