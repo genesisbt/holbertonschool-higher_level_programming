@@ -40,3 +40,10 @@ class Base:
 
         with open("{}.json".format(cls.__name__), 'w') as file:
             file.write(Base.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Transforms from json string to dictionary"""
+        if json_string is None or not json_string:
+            return []
+        return json.loads(json_string)
