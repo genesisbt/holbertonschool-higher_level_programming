@@ -12,6 +12,7 @@ class Rectangle(Base):
     including its functions and its atributes
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """class base constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
