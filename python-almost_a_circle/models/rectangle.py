@@ -98,5 +98,5 @@ class Rectangle(Base):
         """updates the attributes of the object"""
         keys = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
-            setattr(self, attributes[i], args[i])
+            setattr(self, keys[i], args[i])
 
