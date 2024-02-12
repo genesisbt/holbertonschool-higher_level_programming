@@ -3,7 +3,7 @@
 This module contains the class Rectangle
 which inherits from class Base
 """
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
@@ -12,7 +12,7 @@ class Rectangle(Base):
     including its functions and its atributes
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(self, id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -28,11 +28,11 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        return self.x
+        return self.__x
 
     @property
     def y(self):
-        return self.y
+        return self.__y
 
     @width.setter
     def width(self, width):
@@ -56,8 +56,8 @@ class Rectangle(Base):
     def x(self, x):
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
-        elif x <= 0:
-            raise ValueError("x must be > 0")
+        elif x < 0:
+            raise ValueError("x must be = 0")
         else:
             self.__x = x
 
@@ -65,7 +65,7 @@ class Rectangle(Base):
     def y(self, y):
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
-        elif y <= 0:
-            raise ValueError("y must be > 0")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
         else:
             self.__y = y
