@@ -85,8 +85,9 @@ class Rectangle(Base):
 
     def display(self):
         """ prints the Rectangle height * width using "#" on screen"""
+        print("\n" * self.y)
         for n1 in range(self.height):
-            print("".join("#" for n2 in range(self.width)))
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height> of instance"""
