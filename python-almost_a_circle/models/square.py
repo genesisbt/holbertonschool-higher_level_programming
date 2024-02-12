@@ -37,3 +37,11 @@ class Square(Rectangle):
                     if keyname == kname:
                         setattr(self, kname, kvalue)
                         break
+    def to_dictionary(self):
+        """Returns a dictionary representation of the object"""
+        rectdict = {}
+        rectdict["id"] = self.id
+        rectdict["size"] = self.width
+        rectdict["x"] = self.x
+        rectdict["y"] = self.y
+        return rectdict
