@@ -5,6 +5,7 @@ This module contains the base class for all geometric figures
 import json
 import os
 
+
 class Base:
     """
     Base class for all geometric figures
