@@ -113,6 +113,6 @@ class Rectangle(Base):
         rectdict["x"] = self.x
         rectdict["y"] = self.y
         rectdict["id"] = self.id
-        rectdict["width"] = self.width
         rectdict["height"] = self.height
+        rectdict["width"] = self.width
         return rectdict

@@ -42,7 +42,7 @@ class Square(Rectangle):
         """Returns a dictionary representation of the object"""
         rectdict = {}
         rectdict["id"] = self.id
-        rectdict["size"] = self.width
         rectdict["x"] = self.x
+        rectdict["size"] = self.width
         rectdict["y"] = self.y
         return rectdict
