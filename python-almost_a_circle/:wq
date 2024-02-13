@@ -58,7 +58,6 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
-
     @classmethod
     def load_from_file(cls):
         """Return a list of instances"""
@@ -70,5 +69,9 @@ class Base:
             with open(path) as jsonfile:
                 dictionary = cls.from_json_string(jsonfile.read())
             for element in dictionary:
-                objectlist.append(cls.create(**element))
+                objectlist.append(cls.createelement))
         return objectlist
+
+
+
+        
